@@ -14,7 +14,7 @@ export default function Home() {
     setResponse(null);
 
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/curate`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url }),
