@@ -12,9 +12,8 @@ export default function Home() {
     setLoading(true);
     setError(null);
     setResponse(null);
-    alert(process.env.NEXT_PUBLIC_BACKEND_URL);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}`, {
+      const res = await fetch("https://qrator-605j.onrender.com/process", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ link:url }),
