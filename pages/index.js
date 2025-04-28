@@ -12,7 +12,7 @@ export default function Home() {
     setLoading(true);
     setError(null);
     setResponse(null);
-
+    alert(process.env.NEXT_PUBLIC_BACKEND_URL);
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}`, {
         method: 'POST',
